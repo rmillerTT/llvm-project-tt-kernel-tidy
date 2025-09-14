@@ -137,6 +137,11 @@ extern volatile int ZirconModuleAnchorSource;
 static int LLVM_ATTRIBUTE_UNUSED ZirconModuleAnchorDestination =
     ZirconModuleAnchorSource;
 
+// This anchor is used to force the linker to link the TTKernelModule.
+extern volatile int TTKernelModuleAnchorSource;
+static int LLVM_ATTRIBUTE_UNUSED TTKernelModuleAnchorDestination =
+    TTKernelModuleAnchorSource;
+
 } // namespace clang::tidy
 
 #endif
