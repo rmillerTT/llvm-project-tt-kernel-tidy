@@ -24,7 +24,7 @@ public:
 
 } // namespace tt_kernel
 
-// Register the MiscTidyModule using this statically initialized variable.
+// Register the TTKernelModule using this statically initialized variable.
 static ClangTidyModuleRegistry::Add<tt_kernel::TTKernelModule>
     X("tt-kernel-module", "Adds tt-metal kernel lint checks.");
 
