@@ -10,6 +10,7 @@
 #include "../ClangTidyModule.h"
 #include "../ClangTidyModuleRegistry.h"
 #include "CBReservePushBalanceCheck.h"
+#include "CBPushPopBalanceCheck.h"
 
 namespace clang::tidy {
 namespace tt_kernel {
@@ -19,6 +20,8 @@ public:
   void addCheckFactories(ClangTidyCheckFactories &CheckFactories) override {
     CheckFactories.registerCheck<CBReservePushBalanceCheck>(
         "tt-kernel-cb-reserve-push-balance");
+    CheckFactories.registerCheck<CBPushPopBalanceCheck>(
+        "tt-kernel-cb-push-pop-balance");
   }
 };
 

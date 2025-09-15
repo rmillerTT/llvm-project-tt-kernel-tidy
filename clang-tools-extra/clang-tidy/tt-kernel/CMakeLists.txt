@@ -5,6 +5,7 @@ set(LLVM_LINK_COMPONENTS
 
 add_clang_library(clangTidyTTKernelModule STATIC
   CBReservePushBalanceCheck.cpp
+  CBPushPopBalanceCheck.cpp
   TTKernelTidyModule.cpp
 
   LINK_LIBS
@@ -16,7 +17,7 @@ add_clang_library(clangTidyTTKernelModule STATIC
   ClangDriverOptions
   )
 
-clang_target_link_libraries(clangTidyMiscModule
+clang_target_link_libraries(clangTidyTTKernelModule
   PRIVATE
   clangAnalysis
   clangAST
